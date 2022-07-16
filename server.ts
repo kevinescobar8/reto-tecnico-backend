@@ -1,7 +1,8 @@
 import express from 'express';
-import userRoutes from '../Routes/usuario';
+import userRoutes from './src/Routes/usuario';
 import cors from 'cors';
-import db from '../db/connection';
+import db from './src/db/connection';
+import dotenv from 'dotenv';
 
 class Server{
     private app: express.Application;
@@ -12,7 +13,7 @@ class Server{
 
     constructor(){
         this.app = express();
-        this.port = '3000';
+        this.port = process.env.PORT || '1337';
         this.dbConnection();
         this.middlewares();
         this.routes();

@@ -1,6 +1,6 @@
 import { Request, Response } from "express" 
 import Nave from "../db/navedb";
-import Usuario from "../db/navedb"
+import { Lanzadera, LanzaderaTripulada, Notripuladas, Tripuladas } from "../models/nave"
 
 export const getNaves = async ( _req: Request, res: Response ) => {
 
@@ -22,6 +22,7 @@ export const getNave = async ( req: Request, res: Response ) => {
 export const postNave = async ( req: Request, res: Response ) => {
     const { body } = req;
     try {
+        console.log(req.body)
         const nave =  Nave.build(body);
         await nave.save();
 

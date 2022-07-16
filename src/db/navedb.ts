@@ -12,29 +12,31 @@ const Nave = db.define('Nave',{
         type: DataTypes.STRING
     },
     peso: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     },
     empuje: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     },
     altura: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     },
     distanciaTierra: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     },
     capacidad: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     },
     objetivo: {
         type: DataTypes.STRING
     },
     personas: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.INTEGER
     },
     potencia: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.FLOAT
     }
+},{
+    timestamps: false,
 });
 
 export default Nave;

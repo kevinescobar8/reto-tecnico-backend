@@ -15,7 +15,7 @@ class Server{
         this.app = express();
         this.port = process.env.PORT || '1337';
         this.dbConnection();
-        //this.middlewares();
+        this.middlewares();
         this.routes();
     }
 
@@ -29,12 +29,12 @@ class Server{
     }
 
 
-    /*middlewares(){
+    middlewares(){
         this.app.use( cors() );
         this.app.use( express.json() );
         this.app.use( express.static('public') );
 
-    }*/
+    }
 
     routes(){
         this.app.use(this.apiPaths.naves,userRoutes)

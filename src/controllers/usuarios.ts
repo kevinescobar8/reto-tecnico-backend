@@ -22,14 +22,12 @@ export const getNave = async ( req: Request, res: Response ) => {
 export const postNave = async ( req: Request, res: Response ) => {
     const { body } = req;
     try {
-        console.log(req.body)
         const nave =  Nave.build(body);
         await nave.save();
 
         return res.json( nave );
         
     } catch (error: any) {
-        console.log(error)
         return res.status(500).json({
             msg: 'falló la db'
         })

@@ -14,13 +14,7 @@ const Nave = db.define('Nave',{
     peso: {
         type: DataTypes.FLOAT
     },
-    empuje: {
-        type: DataTypes.FLOAT
-    },
     altura: {
-        type: DataTypes.FLOAT
-    },
-    distanciaTierra: {
         type: DataTypes.FLOAT
     },
     capacidad: {

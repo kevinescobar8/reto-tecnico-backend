@@ -2,7 +2,6 @@ import express from 'express';
 import userRoutes from '../Routes/usuario';
 import cors from 'cors';
 import db from '../db/connection';
-import dotenv from 'dotenv';
 
 class Server{
     private app: express.Application;
